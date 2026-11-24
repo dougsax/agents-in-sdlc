@@ -1,0 +1,21 @@
+---
+const target = new URL(
+  `${import.meta.env.BASE_URL}es-es/real-world-development/cli/10-review/`,
+  Astro.site,
+).pathname;
+const canonical = new URL(target, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="es" data-pagefind-ignore>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={canonical} />
+    <title>Redirección al repaso</title>
+  </head>
+  <body>
+    <a href={target}>Esta página se ha movido. Continúa con el repaso y los pasos siguientes.</a>
+  </body>
+</html>
